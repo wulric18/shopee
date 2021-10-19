@@ -1,0 +1,207 @@
+:root{
+    --white-color: #ffffff;
+    --black-color:#000000;
+    --text-color:#333;
+    --text-color-rgba:rgba(255,236,230,0.7);
+    --primary-color: #f63f2d;
+    --navbar-height:30px;
+    --star-gold-color:#ffce3e;
+    --header-height:150px;
+    --header-with-search-height:calc(var(--header-height) - var(--navbar-height));
+    --header_sort-bar-height:46px;
+}
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size:62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid_row{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid_columm-2{
+    width: 16.667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid_columm-2-4{
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid_columm-10{
+    width: 83.334%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes growth {
+    from{
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.modal{
+    position: fixed;
+    top:0;bottom:0;left:0;right:0;
+    display:flex;
+    animation: fadeIn linear 0.2s;
+    }
+.modal_overlay{ 
+        position:absolute;
+        width:100%;
+        height:100%;
+    background-color:rgba(0,0,0,0.4);
+    }
+.modal_body{
+      --growth-from: .7;
+      --growth-to: 1; 
+        position: relative;
+        z-index:1;
+        margin:auto;
+        animation: growth linear 0.1s;
+    }
+/* button */
+.btn.btn-primary{
+background-color: var(--primary-color);
+color: #fff;
+}
+.btn.btn-primary:hover{
+    background-color: #e23727;
+    color: #fff;
+    }
+.btn{
+    min-width:124px;
+    height: 38px;
+    padding:0;
+border:none ;
+text-decoration: none;
+border-radius:2px;
+outline:none;
+cursor:pointer;
+color:var(--text-color);
+display:inline-flex;
+align-items:center;
+justify-content:center;
+background-color: #fff;
+}
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 1.2rem;
+}
+.btn.btn--normal:hover{
+    background-color:rgba(0,0,0,0.10);
+}
+.btn--primary{
+background-color: var(--primary-color);
+color:#fff ;
+}
+.btn.btn--disabled{
+    color: #949494;
+    cursor:default;
+    background-color: #c3c3c3
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  /* selection */
+  .select-input{
+      height:34px;
+      padding:0 12px;
+      min-width: 200px;background-color:#fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    position: relative;
+  }
+  .select-input_label{
+      font-size:1.4rem;
+  }
+  .select-input_icon{
+    font-size: 1.4rem;
+    color:rgba(131,131,131);
+    position: relative;
+    top:1px;
+  }
+  .select-input:hover .select-input_list{
+      display: block;
+  }
+  .select-input_list{
+    position: absolute;
+    top: 25px;
+    left:0;
+    right: 0;
+    border-radius: 3px;
+    background-color:#fff;
+    padding:8px 16px;
+    list-style: none;
+    min-height:50px;
+    z-index: 1;
+    display: none;
+}
+.select-input_link{
+   text-decoration: none;
+   font-size: 1.2rem;
+   color: #333;
+   padding:4px 0;
+   font-weight: 500;
+}
+.select-input_items{
+    padding:8px 0;
+}
+.select-input_link:hover{
+   color:var(--primary-color);
+}
+.pagination{
+display: flex;
+align-items: center;
+justify-content:center;
+ list-style: none;
+}
+.pagination-item{
+    margin: 0 12px;
+}
+.pagination-item_link{
+   text-decoration: none;
+    font-size: 2rem;
+    font-weight:300;
+    color:#939393;
+   min-width: 40px;
+   height: 30px;
+   text-align: center;
+   display: block;
+   line-height: 30px;
+  border-radius:2px;
+}
+.pagination-item_icon{
+
+}
+
+.pagination-item--active:hover{
+    background-color:#fd5c3f;
+}
+.pagination-item--active{
+    background-color:var(--primary-color);
+color:#fff;
+}
